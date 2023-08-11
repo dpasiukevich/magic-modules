@@ -86,9 +86,11 @@ terraform {
 }
 ```
 
+## Provider
+
 ## Provider-level Labels Rework
 
-The labels and annotations are key-value pairs attached on Google cloud resources. Cloud labels are used for organizing resources, filtering resources, breaking down billing, and so on. Annotations are used to attach metadata to Kubernetes resources.
+Labels and annotations are key-value pairs attached on Google cloud resources. Cloud labels are used for organizing resources, filtering resources, breaking down billing, and so on. Annotations are used to attach metadata to Kubernetes resources.
 
 Not all of Google cloud resources support labels and annotations. Please check the Terraform Google provider resource documentation to figure out if the resource supports the `labels` and `annotations` fields.
 
@@ -115,12 +117,6 @@ After upgrading to `5.0.0`, and then running `terraform refresh` or `terraform a
 The new annotations model is similar to the new labels model and will be applied to all of the resources with the top level `annotations` field or the nested `annotations` field inside the top level `metadata` field.
 
 There are now two annotation-related fields with the new model, the `annotations` and the output-only `effective_annotations` fields.
-
-## Provider
-
-### Provider-level change example header
-
-Description of the change and how users should adjust their configuration (if needed).
 
 ## Datasources
 
