@@ -186,6 +186,7 @@ These two unsupported fields were introduced incorrectly. They are now removed.
 
 This unsupported field was introduced incorrectly. It is now removed.
 
+<<<<<<< HEAD
 ## Resource: `google_compute_router_nat`
 
 ### `enable_endpoint_independent_mapping` now defaults to API's default value which is `FALSE`
@@ -195,3 +196,10 @@ it will use the default value from the API which is `FALSE`. If you want to
 enable endpoint independent mapping, then explicity set the value of
 `enable_endpoint_independent_mapping` field to `TRUE`.
 
+=======
+## Resource: `google_compute_autoscaler` (beta)
+
+### `metric.filter` now defaults to `resource.type = gce_instance`
+
+Previously, `metric.filter` doesn't have the defult value and causes a UI error.
+>>>>>>> c92890f72 (Add guide for the breaking change of resource google_compute_autoscaler)
